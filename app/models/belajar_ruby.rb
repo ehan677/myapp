@@ -1,0 +1,2 @@
+class BelajarRuby < ApplicationRecord
+end

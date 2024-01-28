@@ -1,0 +1,12 @@
+<%= form_tag("be/update/#{@naruto.id}") do %>
+<div>
+    <label>Nama game :</label>
+    <input type="text" name="namagame" value="<%= @naruto.namagame%>"> 
+</div>
+<div>
+    <label >Deskripsi :</label>
+    <input type="text" name="komentar" value="<%= @naruto.komentar%>">
+</div>
+<button type="submit">submit</button>
+<a href="/tentang">kembali</a>
+<% end %>

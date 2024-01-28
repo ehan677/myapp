@@ -1,0 +1,27 @@
+ <div> <a href="/input">tambah data</a></div>
+ <p><%= flash[:pesan] %></p>
+ <table class="border-4 border-black">
+    <tr class="border-4 border-black">
+        <th>no</th>
+        <th>nama game</th>
+        <th>keterangan</th>
+      <th>action</th>
+      </tr> 
+         <%
+         no=0
+         @naruto.each do |value| %> 
+         <tr class="border-4 border-black"> 
+         <td>  <%= no= no+1 %> </td>
+         <td><%= value.namagame %></td>
+        <td class="border-4 border-black">
+          <%= value.komentar %>
+        </td>
+        <td class="border-4 border-black">
+            <a href="/BelajarRuby/dota/<%= value.id %>">detail</a>
+            <a href="/BelajarRuby/edit/<%= value.id %>">edit</a>
+            <a href="/BelajarRuby/delete/<%= value.id %>">hapus</a>
+        </td>
+        </tr>
+      <% end %>
+
+</table>

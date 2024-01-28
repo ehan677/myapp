@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+  <body>
+  <nav class="bg-gray-800">
+<div class="flex space-x-4">
+<a href="/index" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">index</a>
+            <a href="/dota" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">dota</a>
+            <a href="/tentang" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">tetntang</a>
+          </div> 
+</nav>
+
+    <%= yield %>
+  </body>
+</html>
